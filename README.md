@@ -1,6 +1,8 @@
-# UB Beamer template (R Markdown)
+# University of Bucharest Beamer template (R Markdown)
 
-Beamer template in University of Bucharest colours, driven by R Markdown / pandoc.
+My version of a Beamer template in University of Bucharest colours, driven by R Markdown / pandoc.
+
+![Screenshot](screenshot.png)
 
 ## Files
 
@@ -15,7 +17,7 @@ Beamer template in University of Bucharest colours, driven by R Markdown / pando
 
 Requires R with `rmarkdown` and a XeLaTeX installation (e.g. `tinytex::install_tinytex()`).
 
-```r
+``` r
 rmarkdown::render("index.Rmd")
 ```
 
