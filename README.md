@@ -1,17 +1,17 @@
-# University of Bucharest Beamer template (R Markdown)
+# University of Bucharest Beamer template (using R Markdown)
 
-My version of a Beamer template in University of Bucharest colours, driven by R Markdown / pandoc.
+This repo contains my version of a Beamer template using the University of Bucharest colours, driven by R Markdown / pandoc. It is based on the CambridgeUS default and modified to match the official guidelines.
 
 ![Screenshot](screenshot.png)
 
-## Files
+## Files in the repo
 
-- `index.Rmd` — the template: YAML header plus example slides that document the conventions. Delete the examples and write your own slides.
-- `includes/presentation_setup.tex` — colours, title page, logo, background, and the `\subheading{}` macro.
-- `includes/headings.lua` — pandoc filter: level-3 headers become sub-headings, level-4 headers become blocks.
-- `includes/logo.png` — UB crest (title page).
-- `includes/background.png` — title-page artwork (lower-right swoosh).
-- `referinte.bib` — bibliography (BibTeX).
+- `index.Rmd`. The template containing YAML header plus example slides that document the conventions. Just delete the examples and write your own content.
+- `includes/presentation_setup.tex`. This contais the colours, title page, logo, background, and the `\subheading{}` macro.
+- `includes/headings.lua`. The pandoc filter where I modified the level-3 headers to become sub-headings. Level-4 headers become blocks.
+- `includes/logo.png`. The UB Logo (only on the title page).
+- `includes/background.png`.  Some title-page artwork I found on the official ,PPT file. 
+- `referinte.bib`. The bibliography file (BibTeX).
 
 ## Rendering
 
