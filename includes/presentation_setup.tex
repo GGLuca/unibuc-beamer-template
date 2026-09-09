@@ -1,0 +1,66 @@
+\usepackage{fancyvrb} 
+\AtBeginSection{}
+% Number continued frames (References I, II, ...) only when a frame actually breaks
+\setbeamertemplate{frametitle continuation}[from second]
+\usepackage{tikz} 
+
+\titlegraphic { 
+  \begin{tikzpicture}[overlay,remember picture]
+    \node[anchor=north,yshift=-1cm] at (current page.north) {
+      \includegraphics[width=3cm]{includes/logo.png}
+    };
+  \end{tikzpicture}
+} 
+
+\definecolor{bluep}{RGB}{2,33,105} 
+\definecolor{tealp}{RGB}{0,174,202} 
+
+% Sub-heading inside a slide: navy, bold, block-title font.
+% Produced from level-3 markdown headers by includes/headings.lua.
+\newcommand{\subheading}[1]{%
+  \par\vspace{0.5em}%
+  {\usebeamerfont{block title}\color{bluep}\bfseries #1\par}%
+  \vspace{0.25em}%
+}
+
+\setbeamercolor{palette primary}{fg=white,bg=tealp}
+\setbeamercolor{palette secondary}{fg=white, bg=bluep}
+\setbeamercolor{palette tertiary}{fg=white, bg=bluep}
+\setbeamercolor{frametitle}{fg=bluep,bg=white}
+\setbeamercolor{title}{fg=bluep,bg=white}
+\setbeamercolor{item}{fg=bluep}
+\setbeamercolor{item projected}{fg=white}
+\setbeamercolor{section in toc}{fg=bluep} 
+
+\setbeamercolor{bibliography entry author}{fg=bluep}
+\setbeamercolor{bibliography entry title}{fg=bluep} 
+\setbeamercolor{bibliography entry location}{fg=bluep}
+\setbeamercolor{bibliography entry note}{fg=bluep}
+
+
+% Title-page background: the artwork is A4-landscape (~1.41:1), not 16:9.
+% Scale it to the frame height and pin it to the bottom-right corner so the
+% swoosh keeps its proportions; the remaining strip on the left stays white.
+\setbeamertemplate{background canvas}{
+  \ifnum\thepage=1\relax
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=south east,inner sep=0pt] at (current page.south east) {
+        \includegraphics[height=\paperheight]{includes/background.png}
+      };
+    \end{tikzpicture}
+  \fi
+}
+
+\setbeamertemplate{title page}{
+  \thispagestyle{empty}
+  \vfill
+  \begin{center}
+    \inserttitlegraphic\par
+    \vspace{1cm} 
+    {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle}\par
+    {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle}\par
+    {\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor}\par
+    {\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate}\par
+  \end{center}
+  \vfill
+}

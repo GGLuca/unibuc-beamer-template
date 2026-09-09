@@ -1,0 +1,76 @@
+---
+title: "Presentation title"
+subtitle: "Subtitle"
+author: "George Gunnesch-Luca"
+date: "`r format(Sys.Date(), '%d.%m.%Y')`"
+fontsize: 11pt
+mathspec: true
+aspectratio: 169
+bibliography: referinte.bib
+#classoption: handout
+
+output:
+  beamer_presentation:
+    theme: "CambridgeUS"
+    fonttheme: "professionalfonts"
+    latex_engine: xelatex
+    toc: false
+    slide_level: 2
+    keep_tex: true
+    pandoc_args: ["--lua-filter=includes/headings.lua"]
+toc-title: "Content"
+
+header-includes:
+  - \input{includes/presentation_setup.tex}
+---
+
+# Structure
+
+## Slides and blocks
+
+A level-1 header (`#`) starts a section: it appears in the top bar but produces no slide of its own. A level-2 header (`##`) starts a new slide (`slide_level: 2`).
+
+### Sub-headings
+
+A level-3 header (`###`) is a sub-heading within the slide: navy, bold, no box.
+
+#### Blocks
+
+A level-4 header (`####`) creates a block. Cite sources with `@Key` or `[@Key]`, e.g., @Viechtbauer2010 or [@Viechtbauer2010].
+
+# Formatting
+
+## Text formatting
+
+This is an **R Markdown** document that demonstrates various formatting options, including *italicized text*, **bold text**, and `inline code`.
+
+## Lists
+
+### Unordered and ordered lists
+
+#### Unordered list
+
+- First item
+- Second item
+  - Nested item
+- Third item
+
+#### Ordered list
+
+1. First step
+2. Second step
+3. Third step
+
+## Tables
+
+```{r echo=FALSE}
+# Create a data frame
+data <- data.frame(
+  Name = c("Mihai", "Adriana"),
+  Age = c(25, 30))
+
+# Create a table using kable
+kableExtra::kable(data, caption = "A simple table created using kable.")
+```
+
+## References {.allowframebreaks}
