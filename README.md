@@ -4,7 +4,7 @@ This repo contains my version of a Beamer template using the University of Bucha
 
 ![Screenshot](screenshot.png)
 
-## Files
+## Files in the repo
 
 - `index.Rmd`. The template containing the YAML header plus example slides that document the conventions. Just delete the examples and write your own content.
 - `includes/presentation_setup.tex`. This contais the colours, title page, logo, background, and the `\subheading{}` macro.
@@ -15,7 +15,7 @@ This repo contains my version of a Beamer template using the University of Bucha
 
 ## Rendering
 
-Requires R with `rmarkdown` and a XeLaTeX installation (I recommend `tinytex::install_tinytex()`).
+Requires R with `rmarkdown` and a functioning XeLaTeX installation (I recommend `tinytex::install_tinytex()`).
 
 ``` r
 rmarkdown::render("index.Rmd")
@@ -23,7 +23,7 @@ rmarkdown::render("index.Rmd")
 
 Or you can do it from the RStudio Knit button. For the handout mode: uncomment `classoption: handout` in the YAML.
 
-## Slide generation 
+## Basics
 
 - `# Title` Creates a section (but no section slide is produced; `\AtBeginSection{}` is empty).
 - `## Title`. This is a new slide (`slide_level: 2`).
