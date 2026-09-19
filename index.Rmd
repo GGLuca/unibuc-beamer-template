@@ -20,6 +20,12 @@ output:
     pandoc_args: ["--lua-filter=includes/headings.lua"]
 toc-title: "Content"
 
+# Link colours. pandoc writes \hypersetup{hidelinks} AFTER header-includes,
+# so this must be set here, not in presentation_setup.tex.
+colorlinks: true
+linkcolor: "."      # internal links (footline, TOC, citations) keep the surrounding colour
+urlcolor: tealp     # web links in teal (defined in includes/presentation_setup.tex)
+
 header-includes:
   - \input{includes/presentation_setup.tex}
 ---
@@ -42,7 +48,7 @@ A level-4 header (`####`) creates a block. Cite sources with `@Key` or `[@Key]`,
 
 ## Text formatting
 
-This is an **R Markdown** document that demonstrates various formatting options, including *italicized text*, **bold text**, and `inline code`.
+This is an **R Markdown** document that demonstrates various formatting options, including *italicized text*, **bold text**, `inline code`, and links: <https://unibuc.ro> or [named links](https://github.com/GGLuca/unibuc-beamer-template).
 
 ## Lists
 
