@@ -25,8 +25,8 @@ Or you can do it from the RStudio Knit button. For the handout mode: uncomment `
 
 ## Basics
 
-- `# Title` Creates a section (but no section slide is produced; `\AtBeginSection{}` is empty).
-- `## Title`. This is a new slide (`slide_level: 2`).
+- `# Title` Creates a section (but no section slide is produced).
+- `## Title` This is a new slide (`slide_level: 2`).
 - `### Title` Sub-heading inside a slide.
 - `#### Title` Creates a block inside a slide.
 - Citations. Classic BibTex citations. Use `@Key` or `[@Key]` with keys from `referinte.bib` (one example entry, `Viechtbauer2010`); the list is printed on the last slide, `## References {.allowframebreaks}`.
