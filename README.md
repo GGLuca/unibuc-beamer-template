@@ -4,7 +4,7 @@ This repo contains my version of a Beamer template using the University of Bucha
 
 ![Screenshot](screenshot.png)
 
-## Files in the repo
+## Files in the repo 
 
 - `index.Rmd`. The template containing the YAML header plus example slides that document the conventions. Just delete the examples and write your own content.
 - `includes/presentation_setup.tex`. This contais the colours, title page, logo, background, and the `\subheading{}` macro.
