@@ -1,0 +1,23 @@
+# R / RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# R Markdown / knitr intermediates
+index.tex
+*_files/
+*_cache/
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+*.synctex.gz
+
+# macOS
+.DS_Store
