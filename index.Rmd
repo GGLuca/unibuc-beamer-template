@@ -59,7 +59,7 @@ This is an **R Markdown** document that demonstrates various formatting options,
 - First item
 - Second item
   - Nested item
-- Third item
+- Third item 
 
 #### Ordered list
 
