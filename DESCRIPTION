@@ -9,6 +9,7 @@ Description: An R Markdown template for Beamer presentations in the
     sub-headings and blocks.
 URL: https://github.com/GGLuca/unibuc-beamer-template
 BugReports: https://github.com/GGLuca/unibuc-beamer-template/issues
+License: MIT + file LICENSE
 Imports: rmarkdown
 SystemRequirements: XeLaTeX (e.g., via tinytex::install_tinytex())
 Encoding: UTF-8
