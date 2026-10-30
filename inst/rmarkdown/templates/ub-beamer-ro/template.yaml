@@ -1,0 +1,5 @@
+name: Prezentare Beamer UB (română)
+description: >
+  Prezentare Beamer în culorile Universității din București.
+  Necesită XeLaTeX.
+create_dir: true
