@@ -1,12 +1,13 @@
 ---
 title: "Presentation title"
 subtitle: "Subtitle"
-author: "George Gunnesch-Luca"
+author: "Your Name"
 date: "`r format(Sys.Date(), '%d.%m.%Y')`"
+lang: en-GB
 fontsize: 11pt
 mathspec: true
 aspectratio: 169
-bibliography: referinte.bib
+bibliography: references.bib
 #classoption: handout
 
 output:
@@ -18,7 +19,7 @@ output:
     slide_level: 2
     keep_tex: true
     pandoc_args: ["--lua-filter=includes/headings.lua"]
-toc-title: "Content"
+toc-title: "Contents"
 
 # Link colours. pandoc writes \hypersetup{hidelinks} AFTER header-includes,
 # so this must be set here, not in presentation_setup.tex.
@@ -76,7 +77,7 @@ data <- data.frame(
   Age = c(25, 30))
 
 # Create a table using kable
-kableExtra::kable(data, caption = "A simple table created using kable.")
+knitr::kable(data, caption = "A simple table created using kable.")
 ```
 
 ## References {.allowframebreaks}

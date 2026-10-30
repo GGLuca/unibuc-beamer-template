@@ -1,0 +1,14 @@
+Package: unibucbeamer
+Title: University of Bucharest Beamer Template for R Markdown
+Version: 0.1.0
+Authors@R: person("George", "Gunnesch-Luca", role = c("aut", "cre"),
+                  email = "george.gunnesch-luca@unibuc.ro")
+Description: An R Markdown template for Beamer presentations in the
+    University of Bucharest colours, in Romanian and English. Based on the
+    CambridgeUS theme, with a title page, logo, and a pandoc Lua filter for
+    sub-headings and blocks.
+URL: https://github.com/GGLuca/unibuc-beamer-template
+BugReports: https://github.com/GGLuca/unibuc-beamer-template/issues
+Imports: rmarkdown
+SystemRequirements: XeLaTeX (e.g., via tinytex::install_tinytex())
+Encoding: UTF-8

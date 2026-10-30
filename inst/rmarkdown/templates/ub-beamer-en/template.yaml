@@ -1,0 +1,5 @@
+name: UB Beamer presentation (English)
+description: >
+  Beamer presentation in the University of Bucharest colours.
+  Requires XeLaTeX.
+create_dir: true
