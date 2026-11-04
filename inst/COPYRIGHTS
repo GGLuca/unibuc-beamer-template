@@ -1,0 +1,19 @@
+unibucbeamer: copyright and licences of bundled files
+=====================================================
+
+The R code, Lua filter, LaTeX setup and R Markdown templates are
+Copyright (c) 2026 George Gunnesch-Luca, under the MIT licence (see LICENSE).
+
+The following files are not covered by the MIT licence:
+
+inst/resources/fonts/SourceSans3-*.otf
+  Source Sans 3. Copyright 2010-2024 Adobe (http://www.adobe.com/),
+  with Reserved Font Name 'Source'. Licensed under the SIL Open Font
+  License, Version 1.1; see inst/resources/fonts/OFL.md.
+
+inst/resources/logo.png
+inst/resources/background.png
+  The logo and title-page artwork of the University of Bucharest belong to
+  the University of Bucharest. They are included only so that the template
+  follows the official visual identity, and should be used according to the
+  university's guidelines.

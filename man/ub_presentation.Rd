@@ -42,7 +42,8 @@ An R Markdown output format.
 }
 \description{
 An R Markdown output format for Beamer slides in the University of
-Bucharest colours. All the technical setup (theme, fonts, XeLaTeX, logo,
+Bucharest colours. All the technical setup (theme, Source Sans 3 font
+(bundled), XeLaTeX, logo,
 title-page artwork, link colours, and the Lua filter for sub-headings and
 blocks) is built in, so the YAML header of a presentation only needs the
 title, author, and date.
@@ -59,12 +60,24 @@ Any pandoc variable set in the YAML header (e.g., \code{lang}, \code{fontsize},
 of this format.
 }
 \examples{
-\dontrun{
-# In the YAML header of an .Rmd file:
-# output: unibucbeamer::ub_presentation
+# The format object used by rmarkdown::render()
+fmt <- ub_presentation()
+class(fmt)
 
-rmarkdown::draft("my-talk.Rmd", template = "ub-beamer-en",
-                 package = "unibucbeamer")
-rmarkdown::render("my-talk/my-talk.Rmd")
+# Romanian labels
+fmt_ro <- ub_prezentare()
+
+\donttest{
+# Create a presentation from the English template and render it
+# (requires pandoc and XeLaTeX)
+if (rmarkdown::pandoc_available()) {
+  dir <- tempfile("ub-talk-")
+  dir.create(dir)
+  rmd <- rmarkdown::draft(file.path(dir, "talk.Rmd"),
+                          template = "ub-beamer-en",
+                          package = "unibucbeamer", edit = FALSE)
+  pdf <- try(rmarkdown::render(rmd, quiet = TRUE))
+  unlink(dir, recursive = TRUE)
+}
 }
 }

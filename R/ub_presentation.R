@@ -29,13 +29,25 @@
 #' @return An R Markdown output format.
 #'
 #' @examples
-#' \dontrun{
-#' # In the YAML header of an .Rmd file:
-#' # output: unibucbeamer::ub_presentation
+#' # The format object used by rmarkdown::render()
+#' fmt <- ub_presentation()
+#' class(fmt)
 #'
-#' rmarkdown::draft("my-talk.Rmd", template = "ub-beamer-en",
-#'                  package = "unibucbeamer")
-#' rmarkdown::render("my-talk/my-talk.Rmd")
+#' # Romanian labels
+#' fmt_ro <- ub_prezentare()
+#'
+#' \donttest{
+#' # Create a presentation from the English template and render it
+#' # (requires pandoc and XeLaTeX)
+#' if (rmarkdown::pandoc_available()) {
+#'   dir <- tempfile("ub-talk-")
+#'   dir.create(dir)
+#'   rmd <- rmarkdown::draft(file.path(dir, "talk.Rmd"),
+#'                           template = "ub-beamer-en",
+#'                           package = "unibucbeamer", edit = FALSE)
+#'   pdf <- try(rmarkdown::render(rmd, quiet = TRUE))
+#'   unlink(dir, recursive = TRUE)
+#' }
 #' }
 #' @export
 ub_presentation <- function(lang = c("en", "ro"),

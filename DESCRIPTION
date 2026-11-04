@@ -1,8 +1,12 @@
 Package: unibucbeamer
 Title: University of Bucharest Beamer Template for R Markdown
 Version: 0.2.0
-Authors@R: person("George", "Gunnesch-Luca", role = c("aut", "cre"),
-                  email = "george.gunnesch-luca@unibuc.ro")
+Authors@R: c(
+    person("George", "Gunnesch-Luca", role = c("aut", "cre", "cph"),
+           email = "george.gunnesch-luca@unibuc.ro"),
+    person("Adobe", role = "cph",
+           comment = "Source Sans 3 font, SIL Open Font License 1.1")
+  )
 Description: An R Markdown template for Beamer presentations in the
     University of Bucharest colours, in Romanian and English. Based on the
     CambridgeUS theme, with a title page, logo, and a pandoc Lua filter for
@@ -10,6 +14,8 @@ Description: An R Markdown template for Beamer presentations in the
 URL: https://github.com/GGLuca/unibuc-beamer-template
 BugReports: https://github.com/GGLuca/unibuc-beamer-template/issues
 License: MIT + file LICENSE
+Copyright: See inst/COPYRIGHTS for the bundled font (Adobe, SIL Open
+    Font License 1.1) and the University of Bucharest logo and artwork.
 Imports: rmarkdown
 SystemRequirements: XeLaTeX (e.g., via tinytex::install_tinytex())
 Encoding: UTF-8
