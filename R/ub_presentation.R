@@ -1,7 +1,8 @@
 #' University of Bucharest Beamer presentation
 #'
 #' An R Markdown output format for Beamer slides in the University of
-#' Bucharest colours. All the technical setup (theme, fonts, XeLaTeX, logo,
+#' Bucharest colours. All the technical setup (theme, Source Sans 3 font
+#' (bundled), XeLaTeX, logo,
 #' title-page artwork, link colours, and the Lua filter for sub-headings and
 #' blocks) is built in, so the YAML header of a presentation only needs the
 #' title, author, and date.
@@ -50,11 +51,13 @@ ub_presentation <- function(lang = c("en", "ro"),
   resources <- system.file("resources", package = "unibucbeamer", mustWork = TRUE)
   res <- function(f) file.path(resources, f)
 
-  # Tell LaTeX where the logo and background live (forward slashes so that
-  # Windows paths work as well).
+  # Tell LaTeX where the logo, background and fonts live (forward slashes so
+  # that Windows paths work as well).
   res_tex <- gsub("\\\\", "/", normalizePath(resources))
   graphics_header <- tempfile("ub-graphicspath-", fileext = ".tex")
-  writeLines(sprintf("\\graphicspath{{%s/}}", res_tex), graphics_header)
+  writeLines(c(sprintf("\\graphicspath{{%s/}}", res_tex),
+               sprintf("\\newcommand{\\ubfontdir}{%s/fonts/}", res_tex)),
+             graphics_header)
 
   includes <- as.list(includes)
   includes$in_header <- c(graphics_header, res("presentation_setup.tex"),

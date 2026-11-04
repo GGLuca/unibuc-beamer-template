@@ -1,4 +1,19 @@
 \usepackage{fancyvrb} 
+
+% Font: Source Sans 3 (SIL Open Font License), bundled with the package in
+% resources/fonts; \ubfontdir is set by unibucbeamer::ub_presentation().
+\setsansfont{SourceSans3}[
+  Path = \ubfontdir, Extension = .otf,
+  UprightFont = *-Regular, ItalicFont = *-It,
+  BoldFont = *-Bold, BoldItalicFont = *-BoldIt]
+% Letters and digits in formulas in the same font (only with mathspec).
+\makeatletter
+\@ifpackageloaded{mathspec}{%
+  \setmathsfont(Digits,Latin)[
+    Path = \ubfontdir, Extension = .otf,
+    UprightFont = *-Regular, ItalicFont = *-It,
+    BoldFont = *-Bold, BoldItalicFont = *-BoldIt]{SourceSans3}}{}
+\makeatother
 \AtBeginSection{}
 % Number continued frames (References I, II, ...) only when a frame actually breaks
 \setbeamertemplate{frametitle continuation}[from second]
@@ -47,6 +62,19 @@
       \node[anchor=south east,inner sep=0pt] at (current page.south east) {
         \includegraphics[height=\paperheight]{background.png}
       };
+    \end{tikzpicture}
+  \else
+    % Bleed: repeat the bar colours slightly past the page edges, under the
+    % headline and footline, so no white hairline shows at the edges.
+    \begin{tikzpicture}[remember picture,overlay]
+      \fill[bluep] ([xshift=-2pt,yshift=2pt]current page.north west)
+        rectangle ([yshift=-3pt]current page.north);
+      \fill[tealp] ([yshift=-3pt]current page.north)
+        rectangle ([xshift=2pt,yshift=2pt]current page.north east);
+      \fill[bluep] ([xshift=-2pt,yshift=-2pt]current page.south west)
+        rectangle ([xshift=.666667\paperwidth,yshift=3pt]current page.south west);
+      \fill[tealp] ([xshift=.666667\paperwidth,yshift=-2pt]current page.south west)
+        rectangle ([xshift=2pt,yshift=3pt]current page.south east);
     \end{tikzpicture}
   \fi
 }

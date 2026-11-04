@@ -23,7 +23,13 @@ SOFTWARE.
 ## Exception: University of Bucharest visual identity
 
 The MIT license above covers the code and text of this repository. It does not
-cover the University of Bucharest logo (`includes/logo.png`) and the title-page
-artwork (`includes/background.png`). These belong to the University of
+cover the University of Bucharest logo (`inst/resources/logo.png`) and the
+title-page artwork (`inst/resources/background.png`). These belong to the University of
 Bucharest and are included only so that the template follows the official
 visual identity. Use them according to the university's guidelines.
+
+## Exception: Source Sans 3 font
+
+The Source Sans 3 font files in `inst/resources/fonts/` are © Adobe and are
+distributed under the SIL Open Font License 1.1 (see
+`inst/resources/fonts/OFL.md`), not under the MIT license.
