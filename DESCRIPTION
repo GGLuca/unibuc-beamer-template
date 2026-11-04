@@ -1,6 +1,6 @@
 Package: unibucbeamer
 Title: University of Bucharest Beamer Template for R Markdown
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: person("George", "Gunnesch-Luca", role = c("aut", "cre"),
                   email = "george.gunnesch-luca@unibuc.ro")
 Description: An R Markdown template for Beamer presentations in the
