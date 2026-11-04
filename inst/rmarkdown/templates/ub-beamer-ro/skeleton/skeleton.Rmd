@@ -3,39 +3,15 @@ title: "Titlul prezentării"
 subtitle: "Subtitlu"
 author: "Numele tău"
 date: "`r format(Sys.Date(), '%d.%m.%Y')`"
-lang: ro
-fontsize: 11pt
-mathspec: true
-aspectratio: 169
 bibliography: referinte.bib
-#classoption: handout
-
-output:
-  beamer_presentation:
-    theme: "CambridgeUS"
-    fonttheme: "professionalfonts"
-    latex_engine: xelatex
-    toc: false
-    slide_level: 2
-    keep_tex: true
-    pandoc_args: ["--lua-filter=includes/headings.lua"]
-toc-title: "Cuprins"
-
-# Link colours. pandoc writes \hypersetup{hidelinks} AFTER header-includes,
-# so this must be set here, not in presentation_setup.tex.
-colorlinks: true
-linkcolor: "."      # internal links (footline, TOC, citations) keep the surrounding colour
-urlcolor: tealp     # web links in teal (defined in includes/presentation_setup.tex)
-
-header-includes:
-  - \input{includes/presentation_setup.tex}
+output: unibucbeamer::ub_prezentare
 ---
 
 # Structură
 
 ## Slide-uri și blocuri
 
-Un titlu de nivel 1 (`#`) începe o secțiune: apare în bara de sus, dar nu produce un slide propriu. Un titlu de nivel 2 (`##`) începe un slide nou (`slide_level: 2`).
+Un titlu de nivel 1 (`#`) începe o secțiune: apare în bara de sus, dar nu produce un slide propriu. Un titlu de nivel 2 (`##`) începe un slide nou.
 
 ### Subtitluri
 

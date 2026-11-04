@@ -7,7 +7,7 @@
 \titlegraphic { 
   \begin{tikzpicture}[overlay,remember picture]
     \node[anchor=north,yshift=-1cm] at (current page.north) {
-      \includegraphics[width=3cm]{includes/logo.png}
+      \includegraphics[width=3cm]{logo.png}
     };
   \end{tikzpicture}
 } 
@@ -16,7 +16,7 @@
 \definecolor{tealp}{RGB}{0,174,202} 
 
 % Sub-heading inside a slide: navy, bold, block-title font.
-% Produced from level-3 markdown headers by includes/headings.lua.
+% Produced from level-3 markdown headers by headings.lua.
 \newcommand{\subheading}[1]{%
   \par\vspace{0.5em}%
   {\usebeamerfont{block title}\color{bluep}\bfseries #1\par}%
@@ -45,7 +45,7 @@
   \ifnum\thepage=1\relax
     \begin{tikzpicture}[remember picture,overlay]
       \node[anchor=south east,inner sep=0pt] at (current page.south east) {
-        \includegraphics[height=\paperheight]{includes/background.png}
+        \includegraphics[height=\paperheight]{background.png}
       };
     \end{tikzpicture}
   \fi

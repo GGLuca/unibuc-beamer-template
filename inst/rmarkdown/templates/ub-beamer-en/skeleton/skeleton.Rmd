@@ -3,39 +3,15 @@ title: "Presentation title"
 subtitle: "Subtitle"
 author: "Your Name"
 date: "`r format(Sys.Date(), '%d.%m.%Y')`"
-lang: en-GB
-fontsize: 11pt
-mathspec: true
-aspectratio: 169
 bibliography: references.bib
-#classoption: handout
-
-output:
-  beamer_presentation:
-    theme: "CambridgeUS"
-    fonttheme: "professionalfonts"
-    latex_engine: xelatex
-    toc: false
-    slide_level: 2
-    keep_tex: true
-    pandoc_args: ["--lua-filter=includes/headings.lua"]
-toc-title: "Contents"
-
-# Link colours. pandoc writes \hypersetup{hidelinks} AFTER header-includes,
-# so this must be set here, not in presentation_setup.tex.
-colorlinks: true
-linkcolor: "."      # internal links (footline, TOC, citations) keep the surrounding colour
-urlcolor: tealp     # web links in teal (defined in includes/presentation_setup.tex)
-
-header-includes:
-  - \input{includes/presentation_setup.tex}
+output: unibucbeamer::ub_presentation
 ---
 
 # Structure
 
 ## Slides and blocks
 
-A level-1 header (`#`) starts a section: it appears in the top bar but produces no slide of its own. A level-2 header (`##`) starts a new slide (`slide_level: 2`).
+A level-1 header (`#`) starts a section: it appears in the top bar but produces no slide of its own. A level-2 header (`##`) starts a new slide.
 
 ### Sub-headings
 

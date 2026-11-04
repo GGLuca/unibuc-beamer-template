@@ -13,3 +13,5 @@ License: MIT + file LICENSE
 Imports: rmarkdown
 SystemRequirements: XeLaTeX (e.g., via tinytex::install_tinytex())
 Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.1.1
